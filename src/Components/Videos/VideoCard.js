@@ -1,7 +1,8 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 
 function VideoCard({video}) {
-     
+    const navigate = useNavigate()
     const {_id ,title,creator,category,description} = video
   return (
     <div className="card-with-overlay"
