@@ -3,7 +3,7 @@
 .showcase{
     /* width: 100%; */
     height: 400px;
-    background: url('https://media.istockphoto.com/photos/black-vintage-camera-surrounding-by-memphis-pattern-light-on-a-black-picture-id1177577238?k=20&m=1177577238&s=612x612&w=0&h=bjvDUs1NfqBqS2nnna0E1ZsLHMvQZc2XrXB_je7cr6E=') center center / 100% 100% no-repeat;
+    background: url('../../assets/homeImg.jpg') center center / 100% 100% no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
