@@ -15,7 +15,6 @@ function VideoDetail() {
                 try{
                     setIsLoading(true)
                     const {data} = await axios.get(`/api/video/${id}`)
-                    console.log(data.video)
                     setVideo(data.video)
                     setIsLoading(false)
                 }catch(error){

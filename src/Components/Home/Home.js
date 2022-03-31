@@ -16,7 +16,6 @@ function Home() {
         try{
           setIsLoading(true)
           const {data} = await axios.get('/api/categories')
-          console.log(data.categories)
           setCategory(data.categories)
           setIsLoading(false)
         }catch(error){

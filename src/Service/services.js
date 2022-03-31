@@ -5,8 +5,6 @@ export const getVideosFromServer = async (setVideos) =>{
     const {data , status} = await axios.get('/api/videos')
     if(status === 200) 
         setVideos(() => data.videos)
-
-    console.log('get data from server', data)
  }catch(error){
      console.log(error)
  }

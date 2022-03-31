@@ -78,8 +78,6 @@ ul{
 }
 .main-container{
   display: flex;
-  /* gap:4rem; */
-  /* padding: 5rem; */
 }
 .main-content{
   flex-grow: 1; 
