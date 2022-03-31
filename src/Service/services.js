@@ -6,7 +6,7 @@ export const getVideosFromServer = async (setVideos) =>{
     if(status === 200) 
         setVideos(() => data.videos)
  }catch(error){
-     console.log(error)
+     console.error(error)
  }
 } 
 export const getCategoryFromServer = async (setCategories) =>{
@@ -16,6 +16,6 @@ export const getCategoryFromServer = async (setCategories) =>{
         setCategories(() => data.categories)
     console.log('get data from server', data)
  }catch(error){
-     console.log(error)
+     console.error(error)
  }
 } 
