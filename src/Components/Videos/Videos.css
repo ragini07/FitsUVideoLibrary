@@ -1,0 +1,31 @@
+.category-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cat-list{
+    padding: 4px 8px;
+    border-radius: 1rem;
+    min-width: 1rem;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.cat-list:hover{
+  background-color: var(--primary-color);
+  color: var(--lg-color);
+}
+.active-tab{
+    background-color: var(--primary-color);
+    color: var(--lg-color);
+}
+.card-with-overlay{
+    cursor: pointer;
+}
+.card-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.card-options{
+    padding-right: 0.4rem;
+}

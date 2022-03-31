@@ -1,0 +1,34 @@
+.main-navhead{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 2rem 3rem;
+    justify-content: space-between; 
+    background-color: var(--primary-color);
+    color :var(--lg-color);
+    position: sticky;
+    z-index: 5;
+    top:0;
+    width: 100%;
+}
+.main-navhead ul.main-menu{
+    flex: 1;
+    margin-left: 5rem;
+    font-weight: bold;
+}
+.main-navhead ul li a{
+    color:var(--lg-color);
+   
+}
+.main-navhead ul li a:hover{
+    color:var(--secondary-color);
+   
+}
+.main-navhead ul li {
+    padding: 0 20px;
+}
+@media(max-width:800px){
+    .brand{
+        display: none;
+    }
+}
