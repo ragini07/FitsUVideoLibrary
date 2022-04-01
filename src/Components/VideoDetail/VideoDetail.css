@@ -35,3 +35,7 @@
     padding-left: 0.4rem;
    
 }
+.active-tab{
+    background-color: var(--primary-color);
+    color: var(--lg-color);
+}

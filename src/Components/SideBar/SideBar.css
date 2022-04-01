@@ -23,14 +23,15 @@
     font-size: 1.2rem;
     padding-bottom: 0.2rem;
 }
-.side-sublist li:hover {
-border-bottom: 2px solid var(--lg-color);
-  
+.active-link{
+    border-bottom: 2px solid var(--lg-color);
 }
 .side-sublist li a{
     color: var(--lg-color);
 }
-
+.side-sublist li a:hover{
+    color: var(--secondary-color);
+}
 /* hamburger */
 .menu-btn{
     cursor: pointer;

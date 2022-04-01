@@ -1,8 +1,11 @@
 import React from 'react'
 import './Header.css'
 import logo from '../../assets/logo.png'
-import {Link}from 'react-router-dom'
+import {Link , useNavigate}from 'react-router-dom'
+import {useAuth} from '../../Context/auth-context' 
 function Header() {
+   const navigate = useNavigate()
+   const {token } = useAuth()
   return (
     <nav className="main-navhead">
     <img className="brand" src={logo} alt="Brand Logo"/>
@@ -11,8 +14,8 @@ function Header() {
       <li> <Link to='/'>Home</Link> </li>
     </ul>
     <ul className="right-menu"> 
-        <li>
-            <i className="fa fa-user fa-2x"></i>
+        <li onClick={() => token? navigate('/profile') : navigate('/login')}>
+          <i className="fa fa-user fa-2x"></i>
         </li>
     </ul>
 </nav>
