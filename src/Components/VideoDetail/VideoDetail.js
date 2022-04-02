@@ -2,7 +2,7 @@ import { SideBar } from '../SideBar/SideBar'
 import {useEffect , useState} from 'react'
 import './VideoDetail.css'
 import '../Videos/Videos.css'
-import {useParams} from 'react-router-dom'
+import {useParams , useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import {useAuth} from '../../Context/auth-context'
 import {addToLikedVideos , 
@@ -19,6 +19,7 @@ function VideoDetail() {
     const [isLoading, setIsLoading] = useState(false)
     const {token} = useAuth()
     const { userData,dispatchUserData} = useUser()
+    const navigate = useNavigate()
     const {likedVideos , watchlater} = userData
     const {id} = useParams();
     useEffect(() => {
@@ -37,14 +38,25 @@ function VideoDetail() {
         const isLiked = isInLikedVideos(likedVideos , video)
         const isSaveToWatchLater = isInWatchLater(watchlater , video)
         const likeHandler = () => {
-            if(isLiked)
-              return  removeFromLikedVideos(dispatchUserData , token , video)
-            return addToLikedVideos(dispatchUserData , token , video)
+            if(token){
+                if(isLiked)
+                    return  removeFromLikedVideos(dispatchUserData , token , video)
+                return addToLikedVideos(dispatchUserData , token , video)
+            }else{
+                navigate('/login')
+            }
+           
         }
         const WatchLaterHandler= () => {
-            if(isSaveToWatchLater)
-                return  removeFromWatchLater(dispatchUserData , token , video)
-            return addToWatchLater(dispatchUserData , token , video)
+            if(token){
+                if(isSaveToWatchLater)
+                     return  removeFromWatchLater(dispatchUserData , token , video)
+                return addToWatchLater(dispatchUserData , token , video)
+            }
+            else{
+                navigate('/login')
+            }
+           
         }
    
   return (
@@ -66,9 +78,8 @@ function VideoDetail() {
                          <button 
                                     onClick={WatchLaterHandler}
                                     className={`btnn btn-outline-primary cat-list ${isSaveToWatchLater && 'active-tab'}`}><i className="fa fa-clock-o"></i>Watch Later</button>
-                            
-                           
-                            <button className='btnn btn-outline-primary cat-list'><i className="fa fa-plus"></i>PlayList</button>
+
+                        <button className='btnn btn-outline-primary cat-list'><i className="fa fa-plus"></i>PlayList</button>
                         </div>
                     </div>
                     

@@ -5,5 +5,6 @@ export const initialFilterState = {
 export const initialUserDataState = {
    history : [],
    likedVideos : [],
-   watchlater : []
+   watchlater : [],
+   playlists : []
 }

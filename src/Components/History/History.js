@@ -34,7 +34,7 @@ function History() {
                     <div className='grid-responsive'>
                         {
                             history.map((video) => {
-                                    return (<VideoCard key={video._id} video={video}/>)
+                                    return (<VideoCard key={video._id} video={video} from="history"/>)
                             })
                         }
                     </div>

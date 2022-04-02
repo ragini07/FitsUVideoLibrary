@@ -1,0 +1,25 @@
+.playlist-container{
+    position: relative;
+    background-color: var(--secondary-color);
+    max-width: 10rem;
+    max-height: 10rem;
+    color: var(--lg-color);
+    padding: 0.4rem 0.4rem;
+    cursor: pointer;
+}
+.playlist-text{
+  
+}
+.inner-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+.overlay-icon{
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+}
+.overlay-icon:hover{
+
+}

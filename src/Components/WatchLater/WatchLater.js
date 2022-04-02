@@ -20,7 +20,7 @@ function WatchLater() {
                     <div className='grid-responsive'>
                         {
                             watchlater.map((video) => {
-                                    return (<VideoCard key={video._id} video={video}/>)
+                                    return (<VideoCard key={video._id} video={video} from="watchLater"/>)
                             })
                         }
                     </div>

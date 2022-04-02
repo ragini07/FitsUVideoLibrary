@@ -32,7 +32,7 @@ export  function SideBar() {
                       <NavLink className={activeLink} to='/history'>History</NavLink>
                     </li>
                     <li>
-                         <NavLink className={activeLink} to='/vide'>PlayList</NavLink>
+                         <NavLink className={activeLink} to='/playlists'>PlayList</NavLink>
                     </li>
           
               

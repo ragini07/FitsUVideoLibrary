@@ -23,11 +23,26 @@ export const userReducerFtn = (state , action) => {
         case "REMOVE_FROM_WATCH_LATER" : {
             return {...state , watchlater : state.watchlater.filter(el => el._id !== action.payload._id)}
         }
-        case "SET_CART" : {
-            return {...state , cart : [...action.payload]}
+        case "CREATE_PLAYLIST" : {
+            return {...state , playlists : action.payload}
         }
-        case "SET_WISHLIST" : {
-            return {...state , wishlist : [...action.payload]}
+        case "DELETE_PLAYLIST" : {
+            return {...state , playlists : action.payload}
+        }
+        case "ADD_TO_PLAYLIST" : {
+            return {...state , playlists : state.playlists.map(playlist => {
+                if(playlist._id === action.payload._id)
+                    return action.payload
+                return playlist
+            })}
+        }
+        case "REMOVE_FROM_PLAYLIST" : {
+            return {...state , playlists : state.playlists.map(playlist => {
+                if(playlist._id === action.payload._id)
+                    return action.payload
+                return playlist
+            })}
+            
         }
         case "CLEAR_USER_DATA" : {
             return initialUserDataState

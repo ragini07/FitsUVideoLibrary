@@ -20,7 +20,7 @@ function Like() {
                     <div className='grid-responsive'>
                         {
                             likedVideos.map((video) => {
-                                    return (<VideoCard key={video._id} video={video}/>)
+                                    return (<VideoCard key={video._id} video={video} from="like"/>)
                             })
                         }
                     </div>

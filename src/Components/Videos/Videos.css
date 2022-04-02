@@ -33,7 +33,7 @@
     position: absolute;
     right: 0.8rem;
     top: 1.1rem;
-    width: 12rem;
+    max-width: 14rem;
     /* border: 1px solid var(--primary-color); */
     background-color: var(--light-gray);
     

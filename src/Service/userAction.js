@@ -11,6 +11,10 @@ export const isInWatchLater = (watchlater , video) => {
     return watchlater.some(el => el._id === video._id)
 }
 
+export const isInPlayList = (playlist , video) => {
+    return playlist.videos.some(el => el._id === video._id)
+}
+
 export const addToHistory = async (dispatchUserData , token , video) => {
     try {
        const {data , status} = await axios.post('/api/user/history',{
@@ -111,6 +115,68 @@ export const removeFromWatchLater = async(dispatchUserData , token , video) => {
         console.log("remove from watch later" , data , status)
         if(status === 200){
             dispatchUserData({type : "REMOVE_FROM_WATCH_LATER" , payload : video})
+        }
+    }catch(error){
+        console.log(error)
+    }
+}
+export const createPlayList = async (dispatchUserData , token ,playListTitle) => {
+    try {
+       const {data , status} = await axios.post('/api/user/playlists',{
+            playlist : {title : playListTitle , description : ""}
+        },{
+            headers : {
+                authorization : token
+            }
+        })
+        console.log("create playlist" , data , status)
+        if(status === 200 || status === 201)
+          dispatchUserData({type : "CREATE_PLAYLIST" , payload : data.playlists})
+    }catch(error){
+        console.log(error)
+    }
+}
+export const deletePlayList = async(dispatchUserData , token , playlist) => {
+    try{
+       const {data , status } = await axios.delete(`/api/user/playlists/${playlist._id}`,{
+            headers : {
+                authorization : token
+            }
+        })
+        console.log("delete playlist" , data , status)
+        if(status === 200){
+            dispatchUserData({type : "DELETE_PLAYLIST" , payload : data.playlists})
+        }
+    }catch(error){
+        console.log(error)
+    }
+}
+export const addToPlayList = async (dispatchUserData , token , playlist , video) => {
+    try {
+       const {data , status} = await axios.post(`/api/user/playlists/${playlist._id}`,{
+            video
+        },{
+            headers : {
+                authorization : token
+            }
+        })
+        console.log("add to playlist" , data , status)
+        if(status === 200 || status === 201)
+          dispatchUserData({type : "ADD_TO_PLAYLIST" , payload : data.playlist})
+    }catch(error){
+        console.log(error)
+    }
+}
+export const removeFromPlayList = async(dispatchUserData , token , playlist , video) => {
+    try{
+       const {data , status } = await axios.delete(`/api/user/playlists/${playlist._id}/${video._id}`,{
+            headers : {
+                authorization : token
+            }
+        })
+        console.log("REMOVE FROM playlist" , data , status)
+        if(status === 200){
+            dispatchUserData({type : "REMOVE_FROM_PLAYLIST" , payload : data.playlist})
         }
     }catch(error){
         console.log(error)
