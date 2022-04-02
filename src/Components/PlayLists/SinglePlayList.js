@@ -21,19 +21,7 @@ function SinglePlayList() {
     const {title , videos} = playListSelected
     console.log(playListSelected)
 
-    // useEffect(() => {
-    //  (   async () => {
-    //         try{
-    //             setIsLoading(true)
-    //            const {data , status}  = await axios.get(`/api/user/playlists/${id}`)
-    //            setPlayListVideos(data.videos)
-    //            setIsLoading(false)
-    //         }catch(error){
-    //             console.log("error in getting video from playlist", error)
-    //             setIsLoading(false)
-    //         }
-    //     })()
-    // },[])
+  
 
     return (
     <>
