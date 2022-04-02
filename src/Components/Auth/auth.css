@@ -36,9 +36,9 @@ h1{
    
 }
 .span-txt{
-    line-height: 20px;
-    font-size: 14px;
-    margin:10px;
+    line-height: 1rem;
+    font-size: 0.9rem;
+    margin: 0.5rem;
 }
 
 .sign-up-btn:hover,.sign-in-btn:hover{

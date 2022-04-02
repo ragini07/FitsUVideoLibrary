@@ -18,7 +18,6 @@ function VideoCard({video , from}) {
     const { userData,dispatchUserData} = useUser()
     const {_id ,title,creator,category,description} = video
     const {history,watchlater} = userData
-    console.log(from)
     const isSaveToWatchLater = isInWatchLater(watchlater , video)
 
     const addToHistoryHandler = () =>{

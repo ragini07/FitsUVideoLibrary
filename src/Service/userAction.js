@@ -67,7 +67,6 @@ export const addToLikedVideos = async (dispatchUserData , token , video) => {
                 authorization : token
             }
         })
-        console.log("add to liked videos" , data , status)
         if(status === 200 || status === 201)
           dispatchUserData({type : "ADD_TO_LIKED_VIDEOS" , payload : video})
     }catch(error){
@@ -81,7 +80,6 @@ export const removeFromLikedVideos = async(dispatchUserData , token , video) => 
                 authorization : token
             }
         })
-        console.log("remove from liked videos" , data , status)
         if(status === 200){
             dispatchUserData({type : "REMOVE_FROM_LIKED_VIDEOS" , payload : video})
         }
@@ -98,7 +96,6 @@ export const addToWatchLater = async (dispatchUserData , token , video) => {
                 authorization : token
             }
         })
-        console.log("add to watch later" , data , status)
         if(status === 200 || status === 201)
           dispatchUserData({type : "ADD_TO_WATCH_LATER" , payload : video})
     }catch(error){
@@ -112,7 +109,6 @@ export const removeFromWatchLater = async(dispatchUserData , token , video) => {
                 authorization : token
             }
         })
-        console.log("remove from watch later" , data , status)
         if(status === 200){
             dispatchUserData({type : "REMOVE_FROM_WATCH_LATER" , payload : video})
         }
@@ -129,7 +125,6 @@ export const createPlayList = async (dispatchUserData , token ,playListTitle) =>
                 authorization : token
             }
         })
-        console.log("create playlist" , data , status)
         if(status === 200 || status === 201)
           dispatchUserData({type : "CREATE_PLAYLIST" , payload : data.playlists})
     }catch(error){
@@ -143,7 +138,6 @@ export const deletePlayList = async(dispatchUserData , token , playlist) => {
                 authorization : token
             }
         })
-        console.log("delete playlist" , data , status)
         if(status === 200){
             dispatchUserData({type : "DELETE_PLAYLIST" , payload : data.playlists})
         }
@@ -160,7 +154,6 @@ export const addToPlayList = async (dispatchUserData , token , playlist , video)
                 authorization : token
             }
         })
-        console.log("add to playlist" , data , status)
         if(status === 200 || status === 201)
           dispatchUserData({type : "ADD_TO_PLAYLIST" , payload : data.playlist})
     }catch(error){
@@ -174,7 +167,6 @@ export const removeFromPlayList = async(dispatchUserData , token , playlist , vi
                 authorization : token
             }
         })
-        console.log("REMOVE FROM playlist" , data , status)
         if(status === 200){
             dispatchUserData({type : "REMOVE_FROM_PLAYLIST" , payload : data.playlist})
         }
