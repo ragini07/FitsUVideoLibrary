@@ -7,9 +7,6 @@
     padding: 0.4rem 0.4rem;
     cursor: pointer;
 }
-.playlist-text{
-  
-}
 .inner-container{
     display: flex;
     justify-content: space-between;
@@ -19,9 +16,6 @@
     position: absolute;
     top: 0;
     right: 0.5rem;
-}
-.overlay-icon:hover{
-
 }
 .buttons-div{
     margin: 0 auto;
