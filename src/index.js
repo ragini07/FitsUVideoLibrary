@@ -5,15 +5,21 @@ import App from "./App";
 import { makeServer } from "./server";
 import {BrowserRouter as Router} from 'react-router-dom'
 import {VideosProvider} from './Context/data-context'
+import {AuthProvider} from './Context/auth-context'
+import {UserProvider} from './Context/user-context'
 // Call make Server
 makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+    <AuthProvider>
       <VideosProvider >
+      <UserProvider>
     <App />
+    </UserProvider>
     </VideosProvider>
+    </AuthProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

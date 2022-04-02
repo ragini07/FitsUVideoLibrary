@@ -1,11 +1,14 @@
 import './SideBar.css'
-import {Link} from 'react-router-dom'
+import {Link , NavLink} from 'react-router-dom'
 import {useState} from 'react'
 
 
 export  function SideBar() {
 
     const [toggleSideBar , setToggleSideBar] = useState(false)
+
+    const activeLink = ({isActive}) => isActive ? "active-link" : ""
+          
 
   return (
    <>
@@ -17,19 +20,19 @@ export  function SideBar() {
                 <ul className="side-sublist"
                     onClick={() => setToggleSideBar(prev => !prev)}>
                     <li>
-                        <Link to='/videos'>Home</Link>
+                        <NavLink className={activeLink} to='/videos'>Home</NavLink>
                     </li>
                     <li>
-                          <Link to='/videos'>Liked Videos</Link>
+                          <NavLink className={activeLink} to='/likedvideos'>Liked Videos</NavLink>
                     </li>
                     <li>
-                         <Link to='/videos'>Watch Later</Link>
+                         <NavLink className={activeLink} to='/watchlater'>Watch Later</NavLink>
                     </li>
                     <li>
-                      <Link to='/videos'>History</Link>
+                      <NavLink className={activeLink} to='/history'>History</NavLink>
                     </li>
                     <li>
-                         <Link to='/videos'>PlayList</Link>
+                         <NavLink className={activeLink} to='/playlists'>PlayList</NavLink>
                     </li>
           
               
