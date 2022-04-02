@@ -23,3 +23,33 @@
 .overlay-icon:hover{
 
 }
+.buttons-div{
+    margin: 0 auto;
+}
+.modal-close{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.modal-input{
+    padding: 0.2rem;
+}
+.modal-label{
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+.modal-label input{
+    margin-right: 0.4rem;
+}
+.modal-label input[type="checkbox"]{
+    width: 20px;
+	height: 20px;
+    padding: 3px;
+    border: 2px solid var(--primary-color);
+}
+.modal-label input[type="checkbox"]:checked {
+	background-color: var(--primary-color);
+}

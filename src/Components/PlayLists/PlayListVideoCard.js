@@ -2,14 +2,12 @@ import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {useAuth} from '../../Context/auth-context'
 import {useUser} from '../../Context/user-context'
-import {useVideos} from '../../Context/data-context'
 import {
    removeFromPlayList} from '../../Service/userAction'
 
 function PlayListVideoCard({video , playListSelected}) {
     const navigate = useNavigate()
     const [showOptions , setShowOptions] = useState(false)
-    const {modalVideo ,setModalVideo} = useVideos()
     const {token} = useAuth()
     const { userData,dispatchUserData} = useUser()
     const {_id ,title,creator,category,description} = video

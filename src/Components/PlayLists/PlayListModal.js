@@ -29,15 +29,19 @@ function PlayListModal() {
           modal && <>
              <div class="modal">
                 <div class="modal-body">
-                    <span 
-                        onClick={() =>setModal(prev => !prev)}
-                        class="cross close-modal"><i class="fa fa-times"></i></span>
+                    <div className='modal-close'>
+                        <div>Save to...</div>
+                        <span 
+                            onClick={() =>setModal(prev => !prev)}
+                            class="cross close-modal"><i class="fa fa-times"></i></span>
+                        </div>
+                 
                      <div class="modal-content">
                          {
                             playlists.length > 0 &&  playlists.map(playlist => {
                                  const inPlayList = isInPlayList(playlist , modalVideo)
                                  return (<>
-                                 <label key={playlist._id}>
+                                 <label key={playlist._id} className="modal-label">
 
                                     <input 
                                         onChange={(e) => videoToPlayListHandler(e , playlist)}
