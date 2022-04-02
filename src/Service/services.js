@@ -1,5 +1,6 @@
 import axios from "axios"
 
+
 export const getVideosFromServer = async (setVideos) =>{
  try {
     const {data , status} = await axios.get('/api/videos')

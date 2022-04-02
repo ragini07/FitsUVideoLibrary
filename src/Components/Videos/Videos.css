@@ -24,8 +24,28 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    position: relative;
 }
 .card-options{
+    padding-right: 0.4rem;
+}
+.list-item{
+    position: absolute;
+    right: 0.8rem;
+    top: 1.1rem;
+    max-width: 14rem;
+    /* border: 1px solid var(--primary-color); */
+    background-color: var(--light-gray);
+    
+}
+.list-item div{
+    padding: 0.2rem;
+    border-bottom: 1px solid var(--primary-color);
+}
+.list-item div:hover{
+    background-color: var(--secondary-color);
+    color : var(--lg-color)
+}
+.list-item div i{
     padding-right: 0.4rem;
 }
