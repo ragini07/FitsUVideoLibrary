@@ -6,13 +6,13 @@ import VideoCard from './VideoCard'
 import axios from 'axios'
 import {useVideos} from '../../Context'
 import {getVideosFromServer , getCategoryFromServer} from '../../Service/services'
-import {filterByCategory} from '../../Utils/getFilteredData'
+import {filterByCategory , filterBySearchQuery} from '../../Utils/getFilteredData'
 
 function Videos() {
     const [isLoading , setIsLoading] = useState(false)
     const navigate = useNavigate()
     const {videos , setVideos , categories , setCategories ,filterState , dispatchFilterState} = useVideos()
-    const { category } = filterState
+    const { category , searchQuery} = filterState
   
     useEffect(() => {
         getVideosFromServer(setVideos)
@@ -23,7 +23,8 @@ function Videos() {
     const changeHandler = (type , payload) =>{
         dispatchFilterState({type , payload})
     }
-    const filteredVideos = filterByCategory(videos , category)
+    const filteredVideosByCategory = filterByCategory(videos , category)
+    const finalFilteredVideos = filterBySearchQuery(filteredVideosByCategory ,searchQuery)
   return (
       <>
        <div className="main-container">
@@ -45,7 +46,7 @@ function Videos() {
    
         <div className='grid-responsive'>
             {
-                filteredVideos.map((video) => {
+                finalFilteredVideos.map((video) => {
                         return (<VideoCard key={video._id} video={video}/>)
                 })
             }

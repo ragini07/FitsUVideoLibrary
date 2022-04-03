@@ -1,5 +1,6 @@
 export const initialFilterState = {
-    category : ""
+    category : "",
+    searchQuery: "",
 }
 
 export const initialUserDataState = {

@@ -1,11 +1,23 @@
-import React from 'react'
+import {useEffect} from 'react'
 import './Header.css'
 import logo from '../../assets/logo.png'
 import {Link , useNavigate}from 'react-router-dom'
-import {useAuth} from '../../Context' 
+import {useAuth , useVideos} from '../../Context' 
 function Header() {
    const navigate = useNavigate()
    const {token } = useAuth()
+   const {filterState , dispatchFilterState} = useVideos()
+   const { searchQuery } = filterState;
+   const searchHandler = (e) => {
+    if(location.pathname !== '/videos')
+        navigate("/videos");
+    else
+         dispatchFilterState({ type: "FILTER_BY_SEARCH", payload: e.target.value });
+  };
+  
+  useEffect(() => {
+    dispatchFilterState({ type: "FILTER_BY_SEARCH", payload: "" });
+  }, [navigate]);
   return (
     <nav className="main-navhead">
   
@@ -18,7 +30,13 @@ function Header() {
  
     <div className='search-container'>
     <i className="fa fa-search"></i>
-      <input></input>
+    <input
+              value={searchQuery}
+              onChange={searchHandler}
+              className="searchbar-input search"
+              type="text"
+              placeholder="type to search"
+            />
     </div>
     <ul className="right-menu"> 
         <li onClick={() => token? navigate('/profile') : navigate('/login')}>
