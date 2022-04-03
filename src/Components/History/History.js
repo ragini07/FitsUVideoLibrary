@@ -3,8 +3,8 @@ import {SideBar} from '../SideBar/SideBar'
 import VideoCard from '../Videos/VideoCard'
 import './History.css'
 import {clearHistory} from '../../Service/userAction'
-import { useAuth } from '../../Context/auth-context'
-import { useUser}  from '../../Context/user-context'
+import { useAuth  , useUser} from '../../Context'
+
 
 
 function History() {

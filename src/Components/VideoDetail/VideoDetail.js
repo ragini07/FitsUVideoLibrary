@@ -4,8 +4,7 @@ import './VideoDetail.css'
 import '../Videos/Videos.css'
 import {useParams , useNavigate} from 'react-router-dom'
 import axios from 'axios'
-import {useAuth} from '../../Context/auth-context'
-import {useVideos} from '../../Context/data-context'
+import {useAuth , useVideos} from '../../Context'
 import {addToLikedVideos , 
     removeFromLikedVideos , 
     isInLikedVideos , 

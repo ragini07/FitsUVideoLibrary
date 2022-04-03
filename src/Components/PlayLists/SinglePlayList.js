@@ -1,7 +1,6 @@
 import {useEffect , useState} from 'react'
 import {SideBar} from '../SideBar/SideBar'
-import { useAuth } from '../../Context/auth-context'
-import { useUser}  from '../../Context/user-context'
+import { useAuth , useUser} from '../../Context'
 import PlayListVideoCard from './PlayListVideoCard'
 import VideoCard from '../Videos/VideoCard'
 import {useParams} from 'react-router-dom'

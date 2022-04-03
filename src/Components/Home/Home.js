@@ -2,7 +2,7 @@ import './Home.css'
 import {useState , useEffect} from 'react'
 import {Link , useNavigate} from 'react-router-dom'
 import axios from 'axios'
-import {useVideos} from '../../Context/data-context'
+import {useVideos} from '../../Context'
 
 
 function Home() {

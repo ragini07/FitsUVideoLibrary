@@ -1,8 +1,6 @@
 import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-import {useAuth} from '../../Context/auth-context'
-import {useUser} from '../../Context/user-context'
-import {useVideos} from '../../Context/data-context'
+import {useAuth , useUser , useVideos} from '../../Context'
 import {
    removeFromPlayList} from '../../Service/userAction'
 

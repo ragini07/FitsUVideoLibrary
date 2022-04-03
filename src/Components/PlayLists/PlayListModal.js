@@ -1,7 +1,5 @@
 import {useState} from 'react'
-import {useAuth} from '../../Context/auth-context'
-import {useUser} from '../../Context/user-context'
-import {useVideos} from '../../Context/data-context'
+import {useAuth , useUser , useVideos} from '../../Context'
 import {createPlayList , isInPlayList , addToPlayList,removeFromPlayList} from '../../Service/userAction'
 
 function PlayListModal() {
