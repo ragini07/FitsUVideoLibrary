@@ -4,7 +4,7 @@ import {SideBar} from '../SideBar/SideBar'
 import {useNavigate} from 'react-router-dom'
 import VideoCard from './VideoCard'
 import axios from 'axios'
-import {useVideos} from '../../Context/data-context'
+import {useVideos} from '../../Context'
 import {getVideosFromServer , getCategoryFromServer} from '../../Service/services'
 import {filterByCategory} from '../../Utils/getFilteredData'
 

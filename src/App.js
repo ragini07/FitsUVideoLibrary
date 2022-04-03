@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <Header/>
-    {/* <PlayListModal /> */}
+    <PlayListModal />
     <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />

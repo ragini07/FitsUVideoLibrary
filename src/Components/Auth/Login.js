@@ -1,6 +1,6 @@
 import './auth.css'
 import {useState} from 'react'
-import {useAuth} from '../../Context/auth-context' 
+import {useAuth} from '../../Context' 
 import {useNavigate , Link , Navigate} from 'react-router-dom'
 import {SideBar} from '../SideBar/SideBar'
 function Login() {

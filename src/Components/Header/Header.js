@@ -2,7 +2,7 @@ import React from 'react'
 import './Header.css'
 import logo from '../../assets/logo.png'
 import {Link , useNavigate}from 'react-router-dom'
-import {useAuth} from '../../Context/auth-context' 
+import {useAuth} from '../../Context' 
 function Header() {
    const navigate = useNavigate()
    const {token } = useAuth()

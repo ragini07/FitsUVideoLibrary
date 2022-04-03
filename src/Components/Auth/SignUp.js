@@ -1,6 +1,6 @@
 import './auth.css'
 import {useState} from 'react'
-import {useAuth} from '../../Context/auth-context' 
+import {useAuth} from '../../Context' 
 import {useNavigate , Link} from 'react-router-dom'
 export function SignUp() {
 
