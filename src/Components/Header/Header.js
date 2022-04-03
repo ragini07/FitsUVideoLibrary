@@ -8,11 +8,18 @@ function Header() {
    const {token } = useAuth()
   return (
     <nav className="main-navhead">
-    <img className="brand" src={logo} alt="Brand Logo"/>
-    <h3 className="brand">FitsU Play</h3>
-    <ul className="main-menu">
-      <li> <Link to='/'>Home</Link> </li>
-    </ul>
+  
+  <div className='main-menu'>
+  <img className="brand-logo" src={logo} alt="Brand Logo"/>
+    <h3 className="brand"><Link to='/'>FitsU Play</Link></h3>
+  </div>
+   
+    
+ 
+    <div className='search-container'>
+    <i className="fa fa-search"></i>
+      <input></input>
+    </div>
     <ul className="right-menu"> 
         <li onClick={() => token? navigate('/profile') : navigate('/login')}>
           <i className="fa fa-user fa-2x"></i>
