@@ -3,6 +3,7 @@ import {useState , useEffect} from 'react'
 import {SideBar} from '../SideBar/SideBar'
 import {useNavigate} from 'react-router-dom'
 import VideoCard from './VideoCard'
+import {ACTION_TYPE} from '../../Utils/constants'
 import axios from 'axios'
 import {useVideos} from '../../Context'
 import {getVideosFromServer , getCategoryFromServer} from '../../Service/services'
@@ -33,13 +34,13 @@ function Videos() {
           <div className="category-container">
           <button 
                 className={`btnn btn-outline-primary cat-list ${!category && 'active-tab'}`}
-                onClick={() => dispatchFilterState({type : "CLEAR_FILTER"})}>All</button>
+                onClick={() => dispatchFilterState({type : ACTION_TYPE.CLEAR_FILTER})}>All</button>
               {
                   categories.map(({_id,categoryName}) => {
                         return  (<button 
                                     key={_id} 
                                     className={`btnn btn-outline-primary cat-list ${categoryName === category && 'active-tab'}`}
-                                    onClick={() => changeHandler("CATEGORY" , categoryName)}>{categoryName}</button>)
+                                    onClick={() => changeHandler(ACTION_TYPE.CATEGORY , categoryName)}>{categoryName}</button>)
                   })
               }
               </div>

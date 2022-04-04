@@ -3,6 +3,7 @@ import './Header.css'
 import logo from '../../assets/logo.png'
 import {Link , useNavigate}from 'react-router-dom'
 import {useAuth , useVideos} from '../../Context' 
+import {ACTION_TYPE} from '../../Utils/constants'
 function Header() {
    const navigate = useNavigate()
    const {token } = useAuth()
@@ -12,11 +13,11 @@ function Header() {
     if(location.pathname !== '/videos')
         navigate("/videos");
     else
-         dispatchFilterState({ type: "FILTER_BY_SEARCH", payload: e.target.value });
+         dispatchFilterState({ type: ACTION_TYPE.FILTER_BY_SEARCH, payload: e.target.value });
   };
   
   useEffect(() => {
-    dispatchFilterState({ type: "FILTER_BY_SEARCH", payload: "" });
+    dispatchFilterState({ type: ACTION_TYPE.FILTER_BY_SEARCH, payload: "" });
   }, [navigate]);
   return (
     <nav className="main-navhead">

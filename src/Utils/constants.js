@@ -9,3 +9,8 @@ export const initialUserDataState = {
    watchlater : [],
    playlists : []
 }
+export const ACTION_TYPE ={
+    CATEGORY : "CATEGORY",
+    FILTER_BY_SEARCH : "FILTER_BY_SEARCH",
+    CLEAR_FILTER : "CLEAR_FILTER"
+}

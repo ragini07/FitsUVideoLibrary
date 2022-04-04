@@ -1,12 +1,13 @@
 import { initialFilterState } from "../Utils";
+import { ACTION_TYPE } from "../Utils/constants";
 
 export const filterReducerFtn = (state , action) => {
     switch(action.type) {
-        case "CATEGORY" :
+        case ACTION_TYPE.CATEGORY :
             return {...state , category : action.payload }     
-        case "FILTER_BY_SEARCH" : 
+        case ACTION_TYPE.FILTER_BY_SEARCH : 
             return {...state , searchQuery :  action.payload}    
-        case "CLEAR_FILTER" : 
+        case ACTION_TYPE.CLEAR_FILTER : 
             return initialFilterState
         default :
             return state
