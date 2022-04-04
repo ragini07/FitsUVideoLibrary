@@ -1,4 +1,4 @@
-import { initialFilterState } from "../Utils/constants";
+import { initialFilterState } from "../Utils";
 
 export const filterReducerFtn = (state , action) => {
     switch(action.type) {

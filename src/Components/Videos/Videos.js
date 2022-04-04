@@ -6,7 +6,7 @@ import VideoCard from './VideoCard'
 import axios from 'axios'
 import {useVideos} from '../../Context'
 import {getVideosFromServer , getCategoryFromServer} from '../../Service/services'
-import {filterByCategory , filterBySearchQuery} from '../../Utils/getFilteredData'
+import {filterByCategory , filterBySearchQuery} from '../../Utils'
 
 function Videos() {
     const [isLoading , setIsLoading] = useState(false)

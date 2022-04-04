@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer, useState } from "react";
 import { filterReducerFtn } from "../Reducer/filterReducer";
-import { initialFilterState } from "../Utils/constants";
+import { initialFilterState } from "../Utils";
 
 const VideosContext = createContext();
 
