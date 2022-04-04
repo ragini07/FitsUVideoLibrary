@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer, useState } from "react";
 import {userReducerFtn} from '../Reducer/userReducer'
-import {initialUserDataState} from '../Utils/constants'
+import {initialUserDataState} from '../Utils'
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {

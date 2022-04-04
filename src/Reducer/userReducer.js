@@ -1,4 +1,4 @@
-import {initialUserDataState} from '../Utils/constants'
+import {initialUserDataState} from '../Utils'
 
 export const userReducerFtn = (state , action) => {
     switch(action.type){

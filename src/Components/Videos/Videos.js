@@ -3,16 +3,17 @@ import {useState , useEffect} from 'react'
 import {SideBar} from '../SideBar/SideBar'
 import {useNavigate} from 'react-router-dom'
 import VideoCard from './VideoCard'
+import {ACTION_TYPE} from '../../Utils/constants'
 import axios from 'axios'
 import {useVideos} from '../../Context'
 import {getVideosFromServer , getCategoryFromServer} from '../../Service/services'
-import {filterByCategory} from '../../Utils/getFilteredData'
+import {filterByCategory , filterBySearchQuery} from '../../Utils'
 
 function Videos() {
     const [isLoading , setIsLoading] = useState(false)
     const navigate = useNavigate()
     const {videos , setVideos , categories , setCategories ,filterState , dispatchFilterState} = useVideos()
-    const { category } = filterState
+    const { category , searchQuery} = filterState
   
     useEffect(() => {
         getVideosFromServer(setVideos)
@@ -23,7 +24,8 @@ function Videos() {
     const changeHandler = (type , payload) =>{
         dispatchFilterState({type , payload})
     }
-    const filteredVideos = filterByCategory(videos , category)
+    const filteredVideosByCategory = filterByCategory(videos , category)
+    const finalFilteredVideos = filterBySearchQuery(filteredVideosByCategory ,searchQuery)
   return (
       <>
        <div className="main-container">
@@ -32,20 +34,20 @@ function Videos() {
           <div className="category-container">
           <button 
                 className={`btnn btn-outline-primary cat-list ${!category && 'active-tab'}`}
-                onClick={() => dispatchFilterState({type : "CLEAR_FILTER"})}>All</button>
+                onClick={() => dispatchFilterState({type : ACTION_TYPE.CLEAR_FILTER})}>All</button>
               {
                   categories.map(({_id,categoryName}) => {
                         return  (<button 
                                     key={_id} 
                                     className={`btnn btn-outline-primary cat-list ${categoryName === category && 'active-tab'}`}
-                                    onClick={() => changeHandler("CATEGORY" , categoryName)}>{categoryName}</button>)
+                                    onClick={() => changeHandler(ACTION_TYPE.CATEGORY , categoryName)}>{categoryName}</button>)
                   })
               }
               </div>
    
         <div className='grid-responsive'>
             {
-                filteredVideos.map((video) => {
+                finalFilteredVideos.map((video) => {
                         return (<VideoCard key={video._id} video={video}/>)
                 })
             }

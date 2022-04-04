@@ -3,6 +3,7 @@ import {useState , useEffect} from 'react'
 import {Link , useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import {useVideos} from '../../Context'
+import {ACTION_TYPE} from '../../Utils/constants'
 
 
 function Home() {
@@ -37,7 +38,7 @@ function Home() {
                                 className="home-card" 
                                     key={_id}
                                     onClick={() => {
-                                              dispatchFilterState({type : "CATEGORY" , payload : categoryName})
+                                              dispatchFilterState({type : ACTION_TYPE.CATEGORY , payload : categoryName})
                                              navigate('/videos')} } >
                                      <img src={imageURL} alt=""/>
                                     <h1 className="overlay">{categoryName}</h1>

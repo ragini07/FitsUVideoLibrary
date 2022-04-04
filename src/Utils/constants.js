@@ -1,5 +1,6 @@
 export const initialFilterState = {
-    category : ""
+    category : "",
+    searchQuery: "",
 }
 
 export const initialUserDataState = {
@@ -7,4 +8,9 @@ export const initialUserDataState = {
    likedVideos : [],
    watchlater : [],
    playlists : []
+}
+export const ACTION_TYPE ={
+    CATEGORY : "CATEGORY",
+    FILTER_BY_SEARCH : "FILTER_BY_SEARCH",
+    CLEAR_FILTER : "CLEAR_FILTER"
 }
