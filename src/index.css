@@ -95,6 +95,8 @@ ul{
 }
 .card-desc{
   padding: 0.3rem 0.4rem;
+  display: flex;
+  justify-content: space-between;
 }
 .card-heading{
   padding: 0 0.4rem;
