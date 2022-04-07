@@ -1,107 +1,133 @@
 @import url(https://fitsu-ui-design.netlify.app/css/components.css);
 
-
-
-
-:root{
-  --primary-color: #fc774a;
-  --primary-hover: #e0582b;
+:root {
+  --primary-color: rgb(26, 23, 23);
+  --primary-hover: rgb(37, 37, 37);
   --secondary-color: rgb(37, 37, 37);
-  --secondary-hover: rgb(49, 49, 49);
+  --secondary-hover: rgb(235, 227, 128);
   --font-primary-color: black;
   --font--secondary-color: rgb(58, 58, 58);
   --lg-color: white;
   --body-background-color: #f8f8f8;
   --light-gray: rgb(184, 182, 182);
-  --success-color : green;
-  --yellow-color : rgb(255, 180, 0);
+  --success-color: green;
+  --yellow-color: rgb(255, 180, 0);
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--body-background-color);
   color: var(--font-primary-color);
   font-size: 16px;
   list-style: 1.5;
 }
-a{
+a {
   color: var(--font--secondary-color);
   text-decoration: none;
 }
-ul{
+ul {
   list-style: none;
 }
-.App{
+li {
+  cursor: pointer;
+}
+.App {
   width: 100%;
   margin: auto;
 }
 /* button */
-.btn{
+.btn {
   padding: 10px 15px;
   margin: 10px;
-  border-radius: 0.5rem ;
+  border-radius: 0.5rem;
   background-color: var(--primary-color);
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease 0s;;
+  transition: all 0.3s ease 0s;
   font-weight: bold;
   font-size: 15px;
   color: white;
 }
-.btn:hover{
+.btn:hover {
   background-color: var(--primary-hover);
 }
-.btn-link{
+.btn-link {
   color: var(--lg-color);
 }
-.secondary{
-  color:var(--primary-color);
-  background-color: white; 
+.secondary {
+  color: var(--primary-color);
+  background-color: white;
   border: 1px solid var(--primary-color);
 }
-.secondary:hover{
+.secondary:hover {
   color: white;
 }
-.filled-star{
+.filled-star {
   color: var(--yellow-color);
 }
-.searchbar{
+.searchbar {
   display: block;
 }
-.link-btn{
-  color : var(--lg-color)
+.link-btn {
+  color: var(--lg-color);
 }
-.main-container{
+.main-container {
   display: flex;
 }
-.main-content{
-  flex-grow: 1; 
+.main-content {
+  flex-grow: 1;
   flex-shrink: 1;
   margin: 0 2rem;
   margin-left: 22%;
   width: 80%;
-
 }
-.grid-responsive{
+.grid-responsive {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(16rem,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-gap: 2rem;
   margin: 1rem 0;
 }
-.card-desc{
+.card-desc {
   padding: 0.3rem 0.4rem;
+  display: flex;
+  justify-content: space-between;
 }
-.card-heading{
+.card-heading {
   padding: 0 0.4rem;
 }
-@media(max-width:800px){
-  .main-content{
+.res-img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  max-width: 18rem;
+}
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-track {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--secondary-hover);
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .main-content {
     margin: 0 2rem;
   }
- 
 }

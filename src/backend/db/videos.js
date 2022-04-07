@@ -10,7 +10,8 @@ export const videos = [
     description:
       "Whats Gucci Family! This week im bringing the Hip Hop Vibes! The first song is custom made for me by Tory Lanez himself ! Which is soo cool! Hes an amazing artist make sure to check him out! ",
     category : "Music",
-    creator : "Osocity"
+    creator : "Osocity",
+    createdAt : "22 March 2020"
   },
   {
     _id: "nDMHOwk0UnU",
@@ -18,7 +19,8 @@ export const videos = [
     description:
       "Crazy Experiments | Experiment Ideas For Chemistry | DIY Tricks |Fire Experiment",
     category : "Science",
-    creator : "DIY Tricks"
+    creator : "DIY Tricks",
+    createdAt : "12 October 2021"
   },
   {
     _id: "QVlqjmhffbo",
@@ -26,7 +28,8 @@ export const videos = [
     description:
       "I share new techniques and how they've led me to a better painter in this video. Sometimes all it takes is a change in perspective to learn and improve as an artist.",
     category : "Art",
-    creator : "Chuck Art"
+    creator : "Chuck Art",
+    createdAt : "28 April 2022"
   },
   {
     _id: "r2kKsjZPrVI",
@@ -34,7 +37,8 @@ export const videos = [
     description:
       "India’s Independence Day on 15th August 1947 was a landmark moment of happiness for millions. But the dark side of the moment was the Partition of country into India and Pakistan by Mountbatten Plan.",
     category : "History",
-    creator : "Dhruv Rathee"
+    creator : "Dhruv Rathee",
+    createdAt : "5 January 2022"
   },
   {
     _id: "J3-ouNBEL1Y",
@@ -42,7 +46,8 @@ export const videos = [
     description:
       "Whats Gucci Family! This week im bringing the Hip Hop Vibes! The first song is custom made for me by Tory Lanez himself ! Which is soo cool! Hes an amazing artist make sure to check him out! ",
     category : "Music",
-    creator : "ElectroDance"
+    creator : "ElectroDance",
+    createdAt : "2 December 2021"
   },
   {
     _id: "6OUjmtTMj_A",
@@ -50,7 +55,8 @@ export const videos = [
     description:
       "ASMR relaxing Demo of two in one triangle landscape painting on canvas using acrylic paints and masking tape.",
     category : "Art",
-    creator : "Abstract Art"
+    creator : "Abstract Art",
+    createdAt : "21 March 2022"
   },
   {
     _id: "rM8Sc6e7Gr8",
@@ -58,7 +64,8 @@ export const videos = [
     description:
       "Shivaji Bhonsle was an Indian warrior king and a member of the Bhonsle Maratha clan. Shivaji carved out an enclave from the declining Adilshahi sultanate of Bijapur that formed the genesis of the Maratha Empire. ",
     category : "History",
-    creator : "Dr Ram Puniyani"
+    creator : "Dr Ram Puniyani",
+    createdAt : "16 January 2022"
   },
   {
     _id: "IzvIe9Qxnb0",
@@ -66,6 +73,7 @@ export const videos = [
     description:
       "Jazz and Bossa Nova Music is perfect to assist your relaxation, reading, studying, work, sleeping, focusing, stress relief, romantic dinner, cooking, or just as background music for any event in your life.",
     category : "Music",
-    creator : "Relax Music"
+    creator : "Relax Music",
+    createdAt : "11 June 2022"
   },
 ];
