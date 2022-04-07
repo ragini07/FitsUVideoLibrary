@@ -25,10 +25,12 @@ function Home() {
   return (
     <>
       <header className="showcase">
+        <h1>Discover your way everywhere</h1>
+        <h3>Shape To Explore</h3>
         <button className="btn">
           <Link to="/videos" className="link-btn">
-            {" "}
-            Explore <i class="fa fa-chevron-right"></i>
+       
+            Start Exploring... 
           </Link>
         </button>
       </header>
