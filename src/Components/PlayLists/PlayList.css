@@ -1,49 +1,64 @@
-.playlist-container{
-    position: relative;
-    background-color: var(--secondary-color);
-    max-width: 10rem;
-    max-height: 10rem;
-    color: var(--lg-color);
-    padding: 0.4rem 0.4rem;
-    cursor: pointer;
+.playlist-container {
+  position: relative;
+  background-color: var(--secondary-color);
+  max-width: 10rem;
+  max-height: 10rem;
+  color: var(--lg-color);
+  padding: 0.4rem 0.4rem;
+  cursor: pointer;
 }
-.inner-container{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
+.inner-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
-.overlay-icon{
-    position: absolute;
-    top: 0;
-    right: 0.5rem;
+.overlay-icon {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
 }
-.buttons-div{
-    margin: 0 auto;
+.buttons-div {
+  margin: 0 auto;
 }
-.modal-close{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+.modal-close {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
-.modal-input{
-    padding: 0.2rem;
+.modal-input {
+  padding: 0.2rem;
 }
-.modal-label{
-    display: flex;
-    font-size: 1.2rem;
-    align-items: center;
-    margin-bottom: 0.2rem;
+.modal-label {
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  margin-bottom: 0.2rem;
 }
-.modal-label input{
-    margin-right: 0.4rem;
+.modal-label input {
+  margin-right: 0.4rem;
 }
-.modal-label input[type="checkbox"]{
-    width: 20px;
-	height: 20px;
-    padding: 3px;
-    border: 2px solid var(--primary-color);
+.modal-label input[type="checkbox"] {
+  height: 20px;
+  padding: 3px;
+  border: 2px solid var(--primary-color);
 }
-.modal-label input[type="checkbox"]:checked {
-	background-color: var(--primary-color);
+input[type="checkbox"]:checked {
+  accent-color: var(--primary-color);
+}
+.card-overlay-container {
+  padding: 0 1rem 8px;
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  right: 0;
+
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 85.5%;
+}
+.overlay-text {
+  padding: 1rem 1rem;
+
+  font-size: 1.5rem;
 }

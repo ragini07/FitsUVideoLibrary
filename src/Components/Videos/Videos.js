@@ -17,7 +17,7 @@ import {
 } from "../../Utils";
 
 function Videos() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [showLoading, setShowLoading] = useState();
   const navigate = useNavigate();
   const {
     videos,

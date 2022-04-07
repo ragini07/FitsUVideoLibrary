@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth, useUser, useVideos } from "../../Context";
 import { getDate } from "../../Utils";
+import { toast } from "react-toastify";
 import {
   addToHistory,
   isInHistory,
@@ -33,8 +34,8 @@ function VideoCard({ video, from }) {
   const WatchLaterHandler = () => {
     if (token) {
       if (isSaveToWatchLater)
-        return removeFromWatchLater(dispatchUserData, token, video);
-      return addToWatchLater(dispatchUserData, token, video);
+        return removeFromWatchLater(dispatchUserData, token, video, toast);
+      return addToWatchLater(dispatchUserData, token, video, toast);
     } else {
       navigate("/login");
     }
@@ -43,7 +44,7 @@ function VideoCard({ video, from }) {
     removeFromHistory(dispatchUserData, token, video);
   };
   const removeFromLikedVideosHandler = () => {
-    removeFromLikedVideos(dispatchUserData, token, video);
+    removeFromLikedVideos(dispatchUserData, token, video, toast);
   };
   const playListHandler = () => {
     if (token) {
@@ -62,6 +63,7 @@ function VideoCard({ video, from }) {
         src={`https://img.youtube.com/vi/${_id}/maxresdefault.jpg`}
         alt="video preview"
       />
+
       <div className="card-text">
         <h4 className="card-heading">{title}</h4>
         <div
@@ -101,7 +103,7 @@ function VideoCard({ video, from }) {
       </div>
       <div className="card-desc">
         <div>{creator}</div>
-        <div>{`${month} ${date} ${year}`}</div>
+        <div>{`${month} ${date},${year}`}</div>
       </div>
     </div>
   );
